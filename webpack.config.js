@@ -1,17 +1,20 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/playground/redux-expensify.js',
+  entry: './src/app.js',
   output: {
-    path: path.join(__dirname, 'docs'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
   },
   module: {
     rules: [
       {
+        test: /\.jsx?$/,
         loader: 'babel-loader',
-        test: /\.js?x$/,
         exclude: /node_modules/,
+        resolve: {
+          extensions: ['.js', '.jsx'],
+        },
       },
       {
         test: /\.s?css$/,
@@ -21,7 +24,7 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'docs'),
+    contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true,
   },
 };
