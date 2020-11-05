@@ -19,8 +19,12 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
+    "express": "^4.17.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^4.5.0",
     "jest": "^26.6.0",
     "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^1.2.1",
     "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "raf": "^3.4.1",
@@ -43,9 +47,12 @@
   "repository": "https://github.com/MarvinMichel/Indecision.git",
   "scripts": {
     "serv": "live-server public/",
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json"
+    "test": "jest --config=jest.config.json",
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "devDependencies": {
     "webpack-cli": "^3.3.11"
