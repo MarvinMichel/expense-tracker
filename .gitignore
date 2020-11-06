@@ -1,5 +1,12 @@
+# Directories
 node_modules/
 src/playground/
 public/dist/
 
+# Log files
 yarn-error.log
+
+# Environment files
+.env
+.env.test
+.env.development
