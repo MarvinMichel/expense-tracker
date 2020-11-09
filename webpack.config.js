@@ -4,12 +4,12 @@ const webpack = require('webpack');
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 if (process.env.NODE_ENV === 'test') {
-  require('dotenv').config({path: '.env.test'});
+  require('dotenv').config({ path: '.env.test' });
 } else if (process.env.NODE_ENV === 'development') {
-  require('dotenv').config({path: '.env.development'});
+  require('dotenv').config({ path: '.env.development' });
 }
 
-module.exports = env => {
+module.exports = (env) => {
   const isProduction = env === 'production';
   const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -42,9 +42,7 @@ module.exports = env => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                publicPath: (resourcePath, context) => {
-                  return path.relative(path.dirname(resourcePath), context) + '/';
-                },
+                publicPath: (resourcePath, context) => `${path.relative(path.dirname(resourcePath), context)}/`,
               },
             },
             'css-loader',
@@ -64,8 +62,8 @@ module.exports = env => {
         'process.env.FIREBASE_PROJECT_ID': JSON.stringify(process.env.FIREBASE_PROJECT_ID),
         'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
         'process.env.FIREBASE_MESSAGING_SENDER': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER),
-        'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID)
-      })
+        'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID),
+      }),
     ],
   };
 };

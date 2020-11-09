@@ -22,12 +22,12 @@ const AppRouter = () => (
           component={ AddExpensePage }
         />
         <Route 
-        path="/edit/:id" 
-        component={EditExpensePage} 
+          path="/edit/:id" 
+          component={EditExpensePage} 
         />
         <Route 
-        path="/help" 
-        component={HelpPage} 
+          path="/help" 
+          component={HelpPage} 
         />
         <Route component={NotFoundPage} />
       </Switch>
