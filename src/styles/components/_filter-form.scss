@@ -1,0 +1,19 @@
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.form__item {
+  border: 1px solid rgb(202, 204, 205);
+  border-radius: 3px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  height: 3rem;
+  margin: 0 1rem 1rem 0;
+  padding: .5rem;
+}
+
+textarea.form__item {
+  height: 10rem;
+}

@@ -1,0 +1,18 @@
+.page-header {
+  background-color: var(--color-grey-light);
+  margin-bottom: 2%;
+  padding: 2% 0;
+}
+
+.page-header__actions {
+  margin-top: 1rem;
+}
+
+.page-header__title {
+  font-size: 2rem;
+  font-weight: 300;
+
+  span {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,11 @@
+.show-for-small {
+  @media (min-width: 45rem) {
+    display: none;
+  }
+}
+
+.show-for-large {
+  @media (max-width: 45rem - .1rem) {
+    display: none;
+  }
+}

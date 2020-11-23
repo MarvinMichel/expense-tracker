@@ -1,3 +1,18 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
 .is-active {
   font-weight: bold;
 }

@@ -1,0 +1,64 @@
+.button {
+  background: var(--color-turgoise-light);
+  border: none;
+  border-radius: 3px;
+  box-shadow: .5rem .5rem 1rem rgba(92, 92, 92, 0.2);
+  color: rgb(255,255,255);
+  cursor: pointer;
+  display: inline-block;
+  font: 500 1em 'Open Sans', sans-serif;
+  line-height: 1;
+  text-decoration: none;
+
+  &--s {
+    padding: .5em 1em;
+  }
+
+  &--m {
+    padding: .5em 2em;
+  }
+
+  &--l {
+    padding: .5em 4em;
+  }
+}
+
+.button:active {
+  box-shadow: .25rem .25rem 1rem rgba(92, 92, 92, 0.2);
+  transform: scale(.98);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button:focus,
+.button:focus {
+  outline: none;
+}
+
+button:focus-visible,
+.button:focus-visible {
+  outline: 2px solid rgb(161, 79, 168);
+}
+
+.button-logout {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    width: clamp(.5rem, 5vw, 2rem);
+
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.button-remove {
+  background-color: rgb(255, 103, 103);
+}

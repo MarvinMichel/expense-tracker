@@ -39,15 +39,18 @@ export class ExpenseListFilters extends React.Component {
 
   render() {
     return (
-      <div>
+      <form className="content-container filter-form">
         <input
           type="text"
+          placeholder="Search Expenses"
           value={ this.props.filters.text }
           onChange={ this.onTextChange }
+          className="form__item"
         />
         <select
           value={ this.props.filters.sortBy }
           onChange={ this.onSortChange }
+          className="form__item"
         >
           <option value="date">Date</option>
           <option value="amount">Amount</option>
@@ -62,9 +65,9 @@ export class ExpenseListFilters extends React.Component {
           onFocusChange={this.onFocusChange}
           showClearDates={true}
           numberOfMonths={1}
-          isOutsideRange={() => false}
+          isOutsideRange={ () => false }
         />
-      </div>
+      </form>
     );
   }
 }

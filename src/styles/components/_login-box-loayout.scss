@@ -1,0 +1,27 @@
+.login-box-layout {
+  background: linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
+  background: -moz-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
+  background: -webkit-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  align-items: center;
+  background: fade-out(rgb(255,255,255), .15);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: clamp(11rem, 25vh, 20rem);
+  justify-content: space-evenly;
+  text-align: center;
+  width: clamp(15rem, 90vw, 20rem);
+}
+
+.login-box__title {
+  margin-top: 1rem;
+  line-height: 1;
+}

@@ -1,13 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseListFilters correctly 1`] = `
-<div>
+<form
+  className="content-container filter-form"
+>
   <input
+    className="form__item"
     onChange={[Function]}
+    placeholder="Search Expenses"
     type="text"
     value=""
   />
   <select
+    className="form__item"
     onChange={[Function]}
     value="date"
   >
@@ -125,17 +130,22 @@ exports[`should render ExpenseListFilters correctly 1`] = `
     withFullScreenPortal={false}
     withPortal={false}
   />
-</div>
+</form>
 `;
 
 exports[`should render ExpenseListFilters with alt data correctly 1`] = `
-<div>
+<form
+  className="content-container filter-form"
+>
   <input
+    className="form__item"
     onChange={[Function]}
+    placeholder="Search Expenses"
     type="text"
     value="bills"
   />
   <select
+    className="form__item"
     onChange={[Function]}
     value="amount"
   >
@@ -253,5 +263,5 @@ exports[`should render ExpenseListFilters with alt data correctly 1`] = `
     withFullScreenPortal={false}
     withPortal={false}
   />
-</div>
+</form>
 `;

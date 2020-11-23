@@ -30,15 +30,15 @@
       "beside"
     ],
     "eqeqeq": [
-      "error",
+      "warn",
       "smart"
     ],
     "func-style": [
-      "warn",
+      "error",
       "expression"
     ],
     "indent": [
-      "error",
+      "warn",
       2
     ],
     "linebreak-style": [
