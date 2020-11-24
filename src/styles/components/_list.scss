@@ -5,7 +5,7 @@ ul {
 .list-header {
   background-color: var(--color-grey-light);
   border: 1px solid hsl(0, 0%, 90%);
-  border-radius: 3px;
+  border-radius: var(--smooth-borders);
   color: var(--color-grey-regular);
   display: flex;
   justify-content: space-between;

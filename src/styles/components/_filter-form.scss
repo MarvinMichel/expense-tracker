@@ -1,17 +1,26 @@
 .filter-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 1rem;
+
+  @media (min-width: 45rem) {
+    justify-content: flex-start;
+  }
 }
 
 .form__item {
   border: 1px solid rgb(202, 204, 205);
-  border-radius: 3px;
-  font-size: 1.2rem;
+  border-radius: var(--smooth-borders);
+  font-size: clamp(1em, 2vw, 1.2em);
   font-weight: 300;
   height: 3rem;
-  margin: 0 1rem 1rem 0;
-  padding: .5rem;
+  margin: 0 0 1rem 0;
+  padding: .5em;
+
+  @media (min-width: 45rem) {
+    margin: 0 1rem 0 0;
+  }
 }
 
 textarea.form__item {

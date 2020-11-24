@@ -1,8 +1,9 @@
 import database from '../firebase/firebase';
+import { toast } from 'react-toastify';
 
 export const addExpense = expense => ({
   type: 'ADD_EXPENSE',
-  expense,
+  expense
 });
 
 export const startAddExpense = (expenseData = {}) => (dispatch, getState) => {
@@ -14,23 +15,39 @@ export const startAddExpense = (expenseData = {}) => (dispatch, getState) => {
     createdAt = 0,
   } = expenseData;
   const expense = {
-    description, note, amount, createdAt,
+    description, note, amount, createdAt
   };
+
+  toast.success('🤑 Expense is saved!', {
+    autoClose: 5000,
+    closeButton: false,
+    closeOnClick: true,
+    hideProgressBar: true,
+    position: 'bottom-center'
+  });
 
   return database.ref(`users/${uid}/expenses`).push(expense).then(ref => {
     dispatch(addExpense({
       id: ref.key,
-      ...expense,
+      ...expense
     }));
   });
 };
 
 export const removeExpense = ({ id } = {}) => ({
   type: 'REMOVE_EXPENSE',
-  id,
+  id
 });
 
 export const startRemoveExpense = ({ id } = {}) => (dispatch, getState) => {
+  toast.warning('👎 Expense is removed!', {
+    autoClose: 5000,
+    closeButton: false,
+    closeOnClick: true,
+    hideProgressBar: true,
+    position: 'bottom-center'
+  });
+
   const uid = getState().auth.uid;
   return database.ref(`users/${uid}/expenses/${id}`).remove().then(() => {
     dispatch(removeExpense({ id }));
@@ -40,10 +57,18 @@ export const startRemoveExpense = ({ id } = {}) => (dispatch, getState) => {
 export const editExpense = (id, updates) => ({
   type: 'EDIT_EXPENSE',
   id,
-  updates,
+  updates
 });
 
 export const startEditExpense = (id, updates) => (dispatch, getState) => {
+  toast.success('🤑 Expense is saved!', {
+    autoClose: 5000,
+    closeButton: false,
+    closeOnClick: true,
+    hideProgressBar: true,
+    position: 'bottom-center'
+  });
+  
   const uid = getState().auth.uid;
   return database.ref(`users/${uid}/expenses/${id}`).update(updates).then(() => {
     dispatch(editExpense(id, updates));
@@ -52,7 +77,7 @@ export const startEditExpense = (id, updates) => (dispatch, getState) => {
 
 export const setExpenses = expenses => ({
   type: 'SET_EXPENSES',
-  expenses,
+  expenses
 });
 
 export const startSetExpenses = () => (dispatch, getState) => {

@@ -1,12 +1,12 @@
 .login-box-layout {
+  align-items: center;
   background: linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
   background: -moz-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
   background: -webkit-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
-  height: 100vh;
-  width: 100vw;
   display: flex;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  width: 100vw;
 }
 
 .login-box {

@@ -1,7 +1,7 @@
 .button {
   background: var(--color-turgoise-light);
   border: none;
-  border-radius: 3px;
+  border-radius: var(--smooth-borders);
   box-shadow: .5rem .5rem 1rem rgba(92, 92, 92, 0.2);
   color: rgb(255,255,255);
   cursor: pointer;

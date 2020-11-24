@@ -9,8 +9,9 @@
 }
 
 .page-header__title {
-  font-size: 2rem;
+  font-size: clamp(1.5em, 5vw, 2em);
   font-weight: 300;
+  max-width: 70vw;
 
   span {
     font-weight: 700;

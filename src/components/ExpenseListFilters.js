@@ -8,12 +8,12 @@ import {
   sortByAmount,
   sortByDate,
   setStartDate,
-  setEndDate,
+  setEndDate
 } from '../actions/filters';
 
 export class ExpenseListFilters extends React.Component {
   state = {
-    calendarFocused: null,
+    calendarFocused: null
   };
 
   onDatesChange = ({ startDate, endDate }) => {
@@ -81,7 +81,7 @@ const mapDispatchToProps = dispatch => ({
   sortByDate: () => dispatch(sortByDate()),
   sortByAmount: () => dispatch(sortByAmount()),
   setStartDate: startDate => dispatch(setStartDate(startDate)),
-  setEndDate: setEndDate => dispatch(setEndDate(endDate)),
+  setEndDate: setEndDate => dispatch(setEndDate(endDate))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExpenseListFilters);
