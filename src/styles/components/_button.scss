@@ -1,12 +1,10 @@
 .button {
-  background: var(--color-turgoise-light);
   border: none;
   border-radius: var(--smooth-borders);
   box-shadow: .5rem .5rem 1rem rgba(92, 92, 92, 0.2);
-  color: rgb(255,255,255);
+  color: var(--color-txt-main);
   cursor: pointer;
   display: inline-block;
-  font: 500 1em 'Open Sans', sans-serif;
   line-height: 1;
   text-decoration: none;
 
@@ -20,6 +18,21 @@
 
   &--l {
     padding: .5em 4em;
+  }
+}
+
+.button--add__fixed {
+  background-color: hsla(0, 0%, 100%, 20%);
+  border-radius: 50%;
+  bottom: 1rem;
+  font-size: 3em;
+  padding: .5rem 1rem;
+  position: fixed;
+  right: 5%;
+  z-index: 999;
+
+  &:hover {
+    transform: scale(1.05);
   }
 }
 
@@ -54,7 +67,7 @@ button:focus-visible,
     width: clamp(.5rem, 5vw, 2rem);
 
     path {
-      fill: #fff;
+      fill: var(--color-txt-main);
     }
   }
 }

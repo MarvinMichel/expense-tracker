@@ -5,9 +5,12 @@ import { startLogout } from '../actions/auth';
 
 export const Header = ({ startLogout }) => (
   <header className="main-header">
-    <div className="main-header--content content-container">
+    <nav>
       <Link className='main-header__title' to="/dashboard">
-        <h1>Expense Tracker</h1>
+        <h1>
+        Expense <br />
+          <span>Tracker</span>
+        </h1>
       </Link>
       <button className="button-logout" title="Log Out" onClick={ startLogout }>
         <svg viewBox="0 0 25.3 23.71">
@@ -15,7 +18,7 @@ export const Header = ({ startLogout }) => (
           <path d="M30,22.88V20.17a.3.3,0,0,0-.3-.3H13.19a.3.3,0,0,0-.3.3V43.28a.31.31,0,0,0,.3.3H29.7a.31.31,0,0,0,.3-.3V40.57a.3.3,0,0,0-.3-.3H16.51A.31.31,0,0,1,16.2,40V23.49a.31.31,0,0,1,.31-.31H29.7A.31.31,0,0,0,30,22.88Z" transform="translate(-12.89 -19.87)" />
         </svg>
       </button>
-    </div>
+    </nav>
   </header>
 );
 

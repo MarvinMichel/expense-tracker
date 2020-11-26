@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
+import 'react-dates/lib/css/_datepicker.css';
 import { v1 as uuid } from 'uuid';
 import {
   setTextFilter,
@@ -39,18 +40,18 @@ export class ExpenseListFilters extends React.Component {
 
   render() {
     return (
-      <form className="content-container filter-form">
+      <form className="filter-form">
         <input
           type="text"
-          placeholder="Search Expenses"
+          placeholder="Search..."
           value={ this.props.filters.text }
           onChange={ this.onTextChange }
-          className="form__item"
+          className="filter-form--item filter-form--item__search"
         />
         <select
           value={ this.props.filters.sortBy }
           onChange={ this.onSortChange }
-          className="form__item"
+          className="filter-form--item filter-form--item__sort"
         >
           <option value="date">Date</option>
           <option value="amount">Amount</option>
@@ -63,9 +64,12 @@ export class ExpenseListFilters extends React.Component {
           onDatesChange={this.onDatesChange}
           focusedInput={this.state.calendarFocused}
           onFocusChange={this.onFocusChange}
-          showClearDates={true}
+          showClearDates={false}
           numberOfMonths={1}
           isOutsideRange={ () => false }
+          displayFormat='DD-MM'
+          firstDayOfWeek={ 1 }
+          noBorder={ true }
         />
       </form>
     );
