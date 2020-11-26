@@ -4,10 +4,11 @@
   width: 20rem;
 
   .filter-form--item {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border: none;
     border-radius: var(--smooth-borders);
-    color: var(--color-txt-sec);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    color: var(--color-txt-grey);
     font-size: 1rem;
     font-weight: 300;
     height: 2.5rem;
@@ -20,7 +21,7 @@
       background-repeat: no-repeat;
       background-position-x: 100%;
       background-position-y: 8px;
-      color: var(--color-txt-sec);
+      color: var(--color-txt-grey);
       padding-left: 1em;
       width: 35%;
     }
@@ -31,7 +32,7 @@
       width: 100%;
 
       &::placeholder {
-        color: var(--color-txt-sec);
+        color: var(--color-txt-grey);
       }
     }
   }
@@ -46,21 +47,29 @@
   width: 5rem;
 
   &_input {
+    background-color: white;
     border-bottom: none;
-    color: var(--color-txt-sec);
+    color: var(--color-txt-grey);
     font-size: 1rem;
     padding: .5em 1em;
   }
 }
 
 .DateRangePickerInput {
+  background-color: white;
   border-radius: var(--smooth-borders);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   overflow: hidden;
 }
 
 .DateRangePickerInput_arrow_svg {
+  background-color: white;
   fill: var(--color-txt-main);
   height: 20px;
   vertical-align: text-bottom;
   width: 20px;
+}
+
+.CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover {
+  background: var(--color-main);
 }

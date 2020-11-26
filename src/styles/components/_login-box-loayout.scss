@@ -1,8 +1,6 @@
 .login-box-layout {
   align-items: center;
-  // background: linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
-  // background: -moz-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
-  // background: -webkit-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
+  background: var(--linear-gradient);
   display: flex;
   height: 100vh;
   justify-items: center;
@@ -15,7 +13,7 @@
   border-radius: var(--smooth-borders);
   display: flex;
   flex-direction: column;
-  height: clamp(11rem, 25vh, 20rem);
+  height: clamp(11rem, 35vh, 20rem);
   justify-content: space-evenly;
   text-align: center;
   width: clamp(15rem, 90vw, 20rem);
@@ -24,4 +22,10 @@
 .login-box__title {
   margin-top: 1rem;
   line-height: 1;
+}
+
+label[for=button] {
+  > * {
+    margin: .25rem;
+  }
 }

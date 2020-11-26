@@ -1,11 +1,13 @@
 :root {
-  // --color-turgoise-light: hsl(175, 69%, 53%);
-  // --color-turqoise-dark: hsl(176, 95%, 33%);
-  // --color-grey-regular: hsl(0, 0%, 40%);
-  // --color-grey-light: hsl(0, 0%, 97%);
+  /***** Colors  *****/
+  --color-main: rgb(109, 92, 250);
+  --color-secundair: rgb(159, 92, 250);
+  --color-tertiair: rgb(102, 226, 218);
+  --linear-gradient: linear-gradient(to right, var(--color-main), var(--color-secundair));
 
-  --color-txt-main: hsl(0, 0%, 17%);
-  --color-txt-sec: hsl(0, 0%, 66%);
+  --color-txt-main: rgb(43, 43, 43);
+  --color-txt-grey: rgb(168, 168, 168);
 
+  /***** Spaces  *****/
   --smooth-borders: .5rem;
 }

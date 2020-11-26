@@ -8,9 +8,11 @@
 }
 
 .expense-form--item {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border: none;
   border-radius: var(--smooth-borders);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16),
+              0 -3px 6px rgba(206, 206, 206, 0.16);
   color: var(--color-txt-main);
   font-size: 1rem;
   font-weight: 300;
@@ -30,12 +32,8 @@
   }
 
   &::placeholder {
-    color: var(--color-txt-sec);
+    color: var(--color-txt-grey);
   }
-}
-
-label[for=button] {
-  display: flex;
 }
 
 .form__error {
@@ -45,6 +43,8 @@ label[for=button] {
 
 /************** React Dates - SingleDate filter **************/
 .SingleDatePickerInput {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16),
+              0 -3px 6px rgba(206, 206, 206, 0.16);
   border-radius: var(--smooth-borders);
   overflow: hidden;
 }
