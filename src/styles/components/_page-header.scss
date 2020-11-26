@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 45rem;
+  max-width: 50rem;
   padding: 5% 0;
 
   > * {
@@ -27,7 +27,7 @@
   font-size: var(--font-size);
   font-weight: 700;
   line-height: 1.2;
-  width: 22rem;
+  width: 25rem;
 
   span {
     color: var(--color-txt-sec);

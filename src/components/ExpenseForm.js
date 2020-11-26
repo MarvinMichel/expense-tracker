@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
+import 'react-dates/lib/css/_datepicker.css';
 import { v1 as uuid } from 'uuid';
 
 export default class ExpenseForm extends React.Component {
@@ -14,7 +15,7 @@ export default class ExpenseForm extends React.Component {
       amount: props.expense ? (props.expense.amount / 100).toString() : '',
       createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
       calendarFocused: false,
-      error: '',
+      error: ''
     };
   }
   onDescriptionChange = e => {
@@ -50,7 +51,7 @@ export default class ExpenseForm extends React.Component {
         description: this.state.description,
         amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.createdAt.valueOf(),
-        note: this.state.note,
+        note: this.state.note
       });
     }
   };
@@ -60,18 +61,18 @@ export default class ExpenseForm extends React.Component {
         {this.state.error && <p className="form__error">{this.state.error}</p>}
         <input
           type="text"
-          placeholder="Description"
+          placeholder="Title"
           autoFocus
           value={this.state.description}
           onChange={this.onDescriptionChange}
-          className="form__item"
+          className="expense-form--item expense-form--item__title"
         />
         <input
           type="text"
           placeholder="Amount"
           value={this.state.amount}
           onChange={this.onAmountChange}
-          className="form__item"
+          className="expense-form--item expense-form--item__amount"
         />
         <SingleDatePicker
           date={this.state.createdAt}
@@ -79,19 +80,19 @@ export default class ExpenseForm extends React.Component {
           focused={this.state.calendarFocused}
           onFocusChange={this.onFocusChange}
           numberOfMonths={1}
-          isOutsideRange={() => false}
+          isOutsideRange={ () => false }
+          displayFormat="DD-MM"
+          noBorder={true}
           id={uuid()}
         />
         <textarea
-          placeholder="Add a note for your expense (optional)"
+          placeholder="Description (optional)"
           value={this.state.note}
           onChange={ this.onNoteChange }
-          className="form__item"
+          className="expense-form--item expense-form--item__description"
         >
         </textarea>
-        <label htmlFor="button">
-          <button className="button button--m">Save Expense</button>
-        </label>
+        <button className="button button--m" type="submit">Save Expense</button>
       </form>
     );
   }

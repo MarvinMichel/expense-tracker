@@ -1,18 +1,18 @@
 .login-box-layout {
   align-items: center;
-  background: linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
-  background: -moz-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
-  background: -webkit-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
+  // background: linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
+  // background: -moz-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
+  // background: -webkit-linear-gradient(110deg, var(--color-turgoise-light), var(--color-turqoise-dark));
   display: flex;
   height: 100vh;
-  justify-content: center;
+  justify-items: center;
   width: 100vw;
 }
 
 .login-box {
   align-items: center;
   background: fade-out(rgb(255,255,255), .15);
-  border-radius: 5px;
+  border-radius: var(--smooth-borders);
   display: flex;
   flex-direction: column;
   height: clamp(11rem, 25vh, 20rem);

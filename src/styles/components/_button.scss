@@ -22,7 +22,7 @@
 }
 
 .button--add__fixed {
-  background-color: hsla(0, 0%, 100%, 20%);
+  background-color: #ffffff60;
   border-radius: 50%;
   bottom: 1rem;
   font-size: 3em;
@@ -74,4 +74,5 @@ button:focus-visible,
 
 .button-remove {
   background-color: rgb(255, 103, 103);
+  max-width: 10rem;
 }
