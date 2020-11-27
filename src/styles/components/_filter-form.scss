@@ -8,7 +8,7 @@
     border: none;
     border-radius: var(--smooth-borders);
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
-    color: var(--color-txt-grey);
+    color: var(--color-txt-main);
     font-size: 1rem;
     font-weight: 300;
     height: 2.5rem;
@@ -21,7 +21,8 @@
       background-repeat: no-repeat;
       background-position-x: 100%;
       background-position-y: 8px;
-      color: var(--color-txt-grey);
+      color: var(--color-txt-main);
+      cursor: pointer;
       padding-left: 1em;
       width: 35%;
     }
@@ -49,7 +50,8 @@
   &_input {
     background-color: white;
     border-bottom: none;
-    color: var(--color-txt-grey);
+    color: var(--color-txt-main);
+    cursor: pointer;
     font-size: 1rem;
     padding: .5em 1em;
   }

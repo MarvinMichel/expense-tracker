@@ -3,9 +3,11 @@
   --color-main: rgb(109, 92, 250);
   --color-secundair: rgb(159, 92, 250);
   --color-tertiair: rgb(102, 226, 218);
+  --color-tertiair-degrade: rgb(111, 221, 166);
   --linear-gradient: linear-gradient(to right, var(--color-main), var(--color-secundair));
+  --linear-gradient-mint: linear-gradient(to right bottom, var(--color-tertiair-degrade), var(--color-tertiair));
 
-  --color-txt-main: rgb(43, 43, 43);
+  --color-txt-main: rgb(71, 82, 107);
   --color-txt-grey: rgb(168, 168, 168);
 
   /***** Spaces  *****/

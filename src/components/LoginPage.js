@@ -5,8 +5,10 @@ import { startGoogleLogin, startFacebookLogin } from '../actions/auth';
 export const LoginPage = ({ startGoogleLogin, startFacebookLogin }) => (
   <div className="login-box-layout">
     <div className="login-box">
-      <h1 className="login-box__title">Budget Planner</h1>
-      <p>Keep your expenses under control</p>
+      <div>
+        <h1 className="login-box__title">Expense Tracker</h1>
+        <p>Keep your expenses under control</p>
+      </div>
       <label htmlFor="button">
         <button className="button button--m google" onClick={ startGoogleLogin }>Sign in with Google</button>
         <button className="button button--m facebook" onClick={ startFacebookLogin }>Sign in with Facebook</button>

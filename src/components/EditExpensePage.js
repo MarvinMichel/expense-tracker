@@ -8,10 +8,17 @@ export class EditExpensePage extends React.Component {
     this.props.startEditExpense(this.props.expense.id, expense);
     this.props.history.push('/');
   };
+
   onRemove = expense => {
     this.props.startRemoveExpense({ id: this.props.expense.id });
     this.props.history.push('/');
   };
+
+  componentDidMount() {
+    const body = document.body;
+    body.style.background = 'fixed url(../images/background.svg) center center / cover no-repeat';
+  };
+
   render() {
     return (
       <React.Fragment>

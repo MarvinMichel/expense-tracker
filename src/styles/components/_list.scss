@@ -1,6 +1,6 @@
 .expense-list {
   display: grid;
-  gap: 5% 1%;
+  gap: 5vh 1%;
   grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
   list-style: none;
   margin-bottom: 10vh;
@@ -12,8 +12,29 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   height: 13rem;
   padding: 1.5rem;
-  transition: background .3s ease;
+  position: relative;
   width: 17rem;
+
+  &::after {
+    background: var(--linear-gradient-mint);
+    border-radius: 25px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    content: '';
+    display: block;
+    height: 13rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: transform .6s ease;
+    width: 17rem;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::after {
+      transform: rotate(-10deg);
+    }
+  }
 
   > * {
     color: white;
@@ -29,6 +50,7 @@
   align-items: center;
   color: var(--color-txt-main);
   display: flex;
+  grid-column: 1 / -1;
   justify-content: center;
   padding: 1.5rem;
 

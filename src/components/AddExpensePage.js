@@ -9,6 +9,11 @@ export class AddExpensePage extends React.Component {
     this.props.history.push('/');
   };
 
+  componentDidMount() {
+    const body = document.body;
+    body.style.background = 'fixed url(images/background.svg) center center / cover no-repeat';
+  };
+
   render() {
     return (
       <React.Fragment>

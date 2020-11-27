@@ -31,12 +31,18 @@
     resize: none;
   }
 
+  &:focus-visible {
+    outline: 2px solid var(--color-main);
+    outline-offset: 2px;
+  }
+
   &::placeholder {
     color: var(--color-txt-grey);
   }
 }
 
 .form__error {
+  color: rgb(192, 70, 70);
   margin: 0 0 1rem 0;
   font-weight: 700;
 }

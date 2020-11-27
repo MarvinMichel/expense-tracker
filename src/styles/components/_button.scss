@@ -26,7 +26,7 @@
   background-color: var(--color-tertiair);
   border-radius: 50%;
   bottom: 1rem;
-  color: black;
+  color: white;
   font-size: 3em;
   padding: .5rem 1rem;
   position: fixed;
@@ -41,35 +41,52 @@
 .button:active {
   box-shadow: .25rem .25rem 1rem rgba(92, 92, 92, 0.2);
   transform: scale(.98);
-
-  &:focus {
-    outline: none;
-  }
-}
-
-button:focus,
-.button:focus {
-  outline: none;
-}
-
-button:focus-visible,
-.button:focus-visible {
-  outline: 2px solid rgb(161, 79, 168);
 }
 
 .button-logout {
+  align-items: center;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   background: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+
+  &:hover {
+    svg {
+      path:nth-of-type(2) {
+        transform: translateX(.25rem);
+      }
+    }
+  }
+
+  span {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    position: static;
+
+    span {
+      display: inline;
+    }
+  }
 
   svg {
-    width: clamp(.5rem, 5vw, 2rem);
+    width: clamp(2rem, 5vw, 3rem);
 
     path {
       fill: var(--color-txt-main);
+      transition: transform .3s ease;
+
+      &:first-of-type {
+        transform: translateY(-1px);
+      }
     }
   }
 }
