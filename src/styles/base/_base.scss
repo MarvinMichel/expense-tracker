@@ -1,18 +1,36 @@
 *, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html,
 body {
+  font-family: 'Montserrat', sans-serif;
+  font-smooth: always;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-smooth: always;
   line-height: 1.6;
+  min-height: 100vh;
   scroll-behavior: smooth;
 }
 
 .is-active {
   font-weight: bold;
+}
+
+*:focus,
+*:active:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px dashed rgb(255, 39, 111);
+  outline-offset: .25rem;
+}
+
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-main);
+  outline-offset: 2px;
 }

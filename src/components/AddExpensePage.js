@@ -9,17 +9,18 @@ export class AddExpensePage extends React.Component {
     this.props.history.push('/');
   };
 
+  componentDidMount() {
+    const body = document.body;
+    body.style.background = 'fixed url(images/background.svg) center center / cover no-repeat';
+  };
+
   render() {
     return (
       <React.Fragment>
         <header className="page-header">
-          <div className="content-container">
-            <h1 className="page-header__title">Add Expense</h1>
-          </div>
+          <h1 className="page-header__title">Add Expense</h1>
         </header>
-        <div className="content-container">
-          <ExpenseForm onSubmit={this.onSubmit} />
-        </div>
+        <ExpenseForm onSubmit={this.onSubmit} />
       </React.Fragment>
     );
   }

@@ -1,19 +1,35 @@
 .page-header {
-  background-color: var(--color-grey-light);
-  margin-bottom: 2%;
-  padding: 2% 0;
+  align-items: center;
+  color: var(--color-txt-main);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 50rem;
+  padding: 5% 0;
+
+  > * {
+    margin: 2% 0;
+  }
 }
 
-.page-header__actions {
-  margin-top: 1rem;
+@media (min-width: 800px) {
+  .page-header {
+    padding: 2% 0;
+
+    > * {
+      margin: 0 0 2%;
+    }
+  }
 }
 
 .page-header__title {
-  font-size: clamp(1.5em, 5vw, 2em);
-  font-weight: 300;
-  max-width: 70vw;
+  --font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: var(--font-size);
+  font-weight: 700;
+  line-height: 1.2;
+  width: 25rem;
 
   span {
-    font-weight: 700;
+    font-size: calc(var(--font-size) * 0.85);
   }
 }
