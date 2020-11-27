@@ -8,6 +8,9 @@
 }
 
 .expense-form--item {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background-color: white;
   border: none;
   border-radius: var(--smooth-borders);
