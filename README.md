@@ -22,6 +22,8 @@ This app lets you track your expenses, so it's easier to save money. You can log
 - [Jest](https://jestjs.io/)
 
 ## Development🤖
+> ⚠️ Access to the firebase database is handled by Dotenv. Create your own database and fill in the config variable inside the firebase file to connect. For more instructions, refer to the documentation at https://firebase.google.com/docs/web/setup.
+
 1. Copy the project by...
     1. ...running `gh repo clone MarvinMichel/expense-tracker` in your terminal to clone the repository.
     2. ...downloading the zip-file and unzipping it to your preferred location.
@@ -30,4 +32,3 @@ This app lets you track your expenses, so it's easier to save money. You can log
 4. Run `yarn install` to install the necessary dependencies.
 5. Open the development-server by running `yarn dev-server`.
 6. Browse to 'localhost:8080' inside your favortie browser.
-> ⚠️ Access to the firebase database is handled by Dotenv. Create your own database and fill in the config variable inside the firebase file to connect.
