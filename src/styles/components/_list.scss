@@ -1,38 +1,40 @@
 .expense-list {
   display: grid;
-  gap: 5vh 1%;
+  gap: 3vh 1%;
   grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
   list-style: none;
   margin-bottom: 10vh;
+  position: relative;
+  z-index: 1;
 }
 
 .expense-list-item {
-  background: var(--linear-gradient);
-  border-radius: 25px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  background: var(--color-main);
+  border-radius: var(--round-borders);
+  box-shadow: 0 3px 6px var(--color-shadow);
   height: 13rem;
   padding: 1.5rem;
   position: relative;
   width: 17rem;
 
   &::after {
-    background: var(--linear-gradient-mint);
-    border-radius: 25px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    background: var(--color-accent);
+    border-radius: var(--round-borders);
+    box-shadow: 0 3px 6px var(--color-shadow);
     content: '';
     display: block;
-    height: 13rem;
+    height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     transition: transform .6s ease;
-    width: 17rem;
+    width: 100%;
     z-index: -1;
   }
 
   &:hover {
     &::after {
-      transform: rotate(-10deg);
+      transform: rotate(-6deg);
     }
   }
 
@@ -66,7 +68,6 @@
 }
 
 .expense-list-item__date {
-  color: var(--color-grey-regular);
   font-size: .9rem;
   font-weight: 300;
 }
@@ -79,5 +80,5 @@
 
 .expense-list-item__price,
 .expense-list-item__description {
-  text-shadow: 0 3 6px rgba(0, 0, 0, .16);
+  text-shadow: 0 3 6px var(--color-shadow);
 }

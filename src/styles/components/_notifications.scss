@@ -1,6 +1,6 @@
 .Toastify__toast {
   --box-size: clamp(10rem, 80vw, 15rem);
-  border-radius: var(--smooth-borders);
+  border-radius: var(--round-borders);
   bottom: 1em;
   font-size: 1em;
   font-weight: 300;
@@ -10,10 +10,14 @@
 }
 
 .Toastify__toast--success {
-  background: var(--linear-gradient-mint);
+  background: var(--color-accent);
   color: var(--color-txt-main);
 }
 
 .Toastify__toast--warning {
   background-color: var(--color-txt-main);
+}
+
+.Toastify__toast--error {
+  background-color: var(--color-error);
 }

@@ -6,6 +6,7 @@
 
 html,
 body {
+  background: var(--color-secondary);
   font-family: 'Montserrat', sans-serif;
   font-smooth: always;
   -moz-osx-font-smoothing: grayscale;
@@ -15,22 +16,12 @@ body {
   scroll-behavior: smooth;
 }
 
-.is-active {
-  font-weight: bold;
-}
-
 *:focus,
 *:active:focus {
   outline: none;
 }
 
 *:focus-visible {
-  outline: 2px dashed rgb(255, 39, 111);
-  outline-offset: .25rem;
-}
-
-select:focus-visible,
-input:focus-visible {
-  outline: 2px solid var(--color-main);
-  outline-offset: 2px;
+  outline: 2px dashed hsl(176, 68%, 64%);
+  outline-offset: .2rem;
 }

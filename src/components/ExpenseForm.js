@@ -17,30 +17,55 @@ export default class ExpenseForm extends React.Component {
       calendarFocused: false,
       error: ''
     };
-  }
+  };
+
   onDescriptionChange = e => {
     const description = e.target.value;
     this.setState(() => ({ description }));
   };
+
   onNoteChange = e => {
     const note = e.target.value;
     this.setState(() => ({ note }));
   };
+
   onAmountChange = e => {
     const amount = e.target.value;
     if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
       this.setState(() => ({ amount }));
     }
   };
+
   onDateChange = createdAt => {
     if (createdAt) {
       this.setState(() => ({ createdAt }));
     }
   };
+
   onFocusChange = ({ focused }) => {
     this.setState(() => ({ calendarFocused: focused }));
   };
-  onSubmit = e => {
+
+  onRemove = e => {
+    e.preventDefault();
+
+    this.props.onRemove({
+      description: this.state.description,
+      amount: parseFloat(this.state.amount, 10) * 100,
+      createdAt: this.state.createdAt.valueOf(),
+      note: this.state.note
+    });
+  };
+
+  onSubmitSave = e => {
+    this.onSubmit(e, 'save');
+  };
+
+  onSubmitRemove = e => {
+    this.onSubmit(e, 'remove');
+  };
+
+  onSubmit = (e, action) => {
     e.preventDefault();
 
     if (!this.state.description || !this.state.amount) {
@@ -52,13 +77,14 @@ export default class ExpenseForm extends React.Component {
         amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.createdAt.valueOf(),
         note: this.state.note
-      });
+      }, action);
     }
   };
+
   render() {
     return (
       <form className="expense-form" onSubmit={ this.onSubmit }>
-        {this.state.error && <p className="form__error">{this.state.error}</p>}
+        {this.state.error && <p className="form__error">{ this.state.error }</p> }
         <input
           type="text"
           placeholder="Title"
@@ -92,7 +118,22 @@ export default class ExpenseForm extends React.Component {
           className="expense-form--item expense-form--item__description"
         >
         </textarea>
-        <button className="button button--m" type="submit">Save Expense</button>
+        <label htmlFor="submit">
+          {
+            location.pathname !== '/create' && (
+              <button
+                className="button button--s button-remove"
+                type="submit"
+                onClick={ this.onSubmitRemove }
+              >Remove</button>
+            )
+          }
+          <button
+            className="button button--m"
+            type="submit"
+            onClick={ this.onSubmitSave }
+          >Save</button>
+        </label>
       </form>
     );
   }

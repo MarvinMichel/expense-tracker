@@ -1,15 +1,13 @@
 :root {
   /***** Colors  *****/
-  --color-main: rgb(109, 92, 250);
-  --color-secundair: rgb(159, 92, 250);
-  --color-tertiair: rgb(102, 226, 218);
-  --color-tertiair-degrade: rgb(111, 221, 166);
-  --linear-gradient: linear-gradient(to right, var(--color-main), var(--color-secundair));
-  --linear-gradient-mint: linear-gradient(to right bottom, var(--color-tertiair-degrade), var(--color-tertiair));
-
-  --color-txt-main: rgb(71, 82, 107);
-  --color-txt-grey: rgb(168, 168, 168);
+  --color-main: linear-gradient(to right, hsl(246, 94%, 67%),  hsl(265, 94%, 67%));
+  --color-secondary: hsl(248, 30%, 95%);
+  --color-accent: linear-gradient(to right bottom,  hsl(150, 62%, 65%), hsl(176, 68%, 64%));
+  --color-error: hsl(0, 69%, 60%);
+  --color-txt-main: hsl(222, 20%, 35%);
+  --color-txt-grey: hsl(0, 0%, 66%);
+  --color-shadow:  hsla(0, 0%, 0%, 0.16);
 
   /***** Spaces  *****/
-  --smooth-borders: .5rem;
+  --round-borders: 2rem;
 }

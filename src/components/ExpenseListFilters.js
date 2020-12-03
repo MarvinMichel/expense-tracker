@@ -43,34 +43,41 @@ export class ExpenseListFilters extends React.Component {
       <form className="filter-form">
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Search expenses..."
           value={ this.props.filters.text }
           onChange={ this.onTextChange }
           className="filter-form--item filter-form--item__search"
         />
-        <select
-          value={ this.props.filters.sortBy }
-          onChange={ this.onSortChange }
-          className="filter-form--item filter-form--item__sort"
-        >
-          <option value="date">Date</option>
-          <option value="amount">Amount</option>
-        </select>
-        <DateRangePicker
-          startDate={this.props.filters.startDate}
-          startDateId={uuid()}
-          endDate={this.props.filters.endDate}
-          endDateId={uuid()}
-          onDatesChange={this.onDatesChange}
-          focusedInput={this.state.calendarFocused}
-          onFocusChange={this.onFocusChange}
-          showClearDates={false}
-          numberOfMonths={1}
-          isOutsideRange={ () => false }
-          displayFormat='DD-MM'
-          firstDayOfWeek={ 1 }
-          noBorder={ true }
-        />
+        <label htmlFor="sort-by">
+          <span>Sort by:</span>
+          <select
+            value={ this.props.filters.sortBy }
+            onChange={ this.onSortChange }
+            name="sort-by"
+            className="filter-form--item filter-form--item__sort"
+          >
+            <option value="date">Date</option>
+            <option value="amount">Amount</option>
+          </select>
+        </label>
+        <label htmlFor="filter-by">
+          <span>Filter by date:</span>
+          <DateRangePicker
+            startDate={this.props.filters.startDate}
+            startDateId={uuid()}
+            endDate={this.props.filters.endDate}
+            endDateId={uuid()}
+            onDatesChange={this.onDatesChange}
+            focusedInput={this.state.calendarFocused}
+            onFocusChange={this.onFocusChange}
+            showClearDates={false}
+            numberOfMonths={1}
+            isOutsideRange={ () => false }
+            displayFormat='DD-MM'
+            firstDayOfWeek={ 1 }
+            noBorder={ true }
+          />
+        </label>
       </form>
     );
   }
@@ -85,7 +92,7 @@ const mapDispatchToProps = dispatch => ({
   sortByDate: () => dispatch(sortByDate()),
   sortByAmount: () => dispatch(sortByAmount()),
   setStartDate: startDate => dispatch(setStartDate(startDate)),
-  setEndDate: setEndDate => dispatch(setEndDate(endDate))
+  setEndDate: (endDate) => dispatch(setEndDate(endDate))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExpenseListFilters);

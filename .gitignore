@@ -1,7 +1,7 @@
 # Directories
 node_modules/
-src/playground/
 public/dist/
+.netlify/
 
 # Log files
 yarn-error.log
