@@ -4,15 +4,12 @@
 This app lets you track your expenses, so it's easier to save money. 
 You can login with a Google, Facebook or GitHub account or by registering with an email and password. Authorization and the database is done via Firebase. All testing files are selfmade with Jest. DatePicker is originated from React-Dates by airbnb. Actions are passed down with Redux. Notifications are displayed with React-Toastify.
 
-<figure style="display:flex; flex-direction: column; align-items: center;">
-    <img width="1552" alt="Screenshot 2020-12-03 at 17 44 27" src="https://user-images.githubusercontent.com/25977763/101060405-ac2a9780-358f-11eb-9ff2-a38d60de243e.png">
-    <figcaption width="300px">Login with your email and password or use your social media platforms to easily login and authenticate yourself.</figcaption>
-</figure>
 
-<figure>
-    <img width="1552" alt="Screenshot 2020-12-03 at 17 46 06" src="https://user-images.githubusercontent.com/25977763/101060625-ea27bb80-358f-11eb-83e6-030c5698c47e.png">
-    <figcaption>Get a good sight on your expenses to maintain your budget.</figcaption>
-</figure>
+<img width="1500" alt="Screenshot 2020-12-03 at 17 44 27" src="https://user-images.githubusercontent.com/25977763/101060405-ac2a9780-358f-11eb-9ff2-a38d60de243e.png">
+
+<img width="1500" alt="Screenshot 2020-12-03 at 17 46 06" src="https://user-images.githubusercontent.com/25977763/101060625-ea27bb80-358f-11eb-83e6-030c5698c47e.png">
+
+<img width="1552" alt="Screenshot 2020-12-03 at 17 46 36" src="https://user-images.githubusercontent.com/25977763/101062031-6e2e7300-3591-11eb-8a6e-a8fe6345df53.png">
 
 ## Dependencies
 - [Babel](https://babeljs.io/)
